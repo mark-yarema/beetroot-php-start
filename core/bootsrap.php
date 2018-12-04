@@ -6,16 +6,8 @@
  * Time: 20:38
  */
 
-require "function.php";
-
 $app = [];
 $app['config'] = require 'config.php';
-
-
-require "database/Connection.php";
-require "database/QueryBuilder.php";
-require "database/Router.php";
-require "core/Request.php";
 
 $config = require 'config.php';
 
