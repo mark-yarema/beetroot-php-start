@@ -7,12 +7,10 @@
  */
 
 
-$routes = [
-    ''              => 'controlers/index.php',
-    'about'         => 'controlers/about.php',
-    'about/culture' => 'controlers/abuot-culture.php',
-    'contact'       => 'controlers/contact.php'
+$router->get('', 'controlers/index.php');
+$router->get('about/culture', 'controlers/abuot-culture.php');
+$router->get('contact', 'controlers/contact.php');
+$router->get('contact', 'controlers/contact.php');
+$router->get('ask-name',  'controlers/ask-name.php');
 
-];
-
-$router->define($routes);
+$router->post('save-name', 'controlers/save-name.php');
