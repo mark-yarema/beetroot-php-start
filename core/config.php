@@ -8,7 +8,7 @@
 return[
   'database' => [
       'host' => 'localhost',
-      'name' => 'users',
+      'name' => 'newdatabase',
       'user' => 'root',
       'password' => '1'
 
