@@ -6,12 +6,9 @@
  * Time: 20:38
  */
 
-$app = [];
-$app['config'] = require 'config.php';
+App::bind('config', require 'config.php' );
 
-$config = require 'config.php';
-
-$app['database'] = new QueryBuilder(Connection::make($app['config']['database']));
+App::bind('database', new QueryBuilder(Connection::make(app::get('config', ['database']))));
 
 //dd($app);
 
