@@ -46,5 +46,18 @@ class  Router
         }
 
         throw new Exception('Page not found');
+
+        $array = explode('@', $this->routes[$method][$url]);
+        return $this->callAction(...$array);
     }
+
+        public function callAction($controller, $action)
+    {
+        $controller = new $controller;
+        if (! method_exists($controller, $action)) {
+        throw new Exception('Action don`t exists');
+    }
+        return $controller->$action();
+    }
+
 };

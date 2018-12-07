@@ -7,10 +7,9 @@
  */
 
 
-$router->get('', 'controlers/index.php');
-$router->get('about/culture', 'controlers/abuot-culture.php');
-$router->get('contact', 'controlers/contact.php');
-$router->get('contact', 'controlers/contact.php');
-$router->get('ask-name',  'controlers/ask-name.php');
-
-$router->post('save-name', 'controlers/save-name.php');
+$router->get('','PagesController@index');
+$router->get('about','PagesController@about');
+$router->get('contact','PagesController@contact');
+//$router->get('ask-name',  'controlers/ask-name.php');
+//
+//$router->post('save-name', 'controlers/save-name.php');
