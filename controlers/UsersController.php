@@ -15,3 +15,4 @@ class UsersController
         require 'views/index.s.php';
     }
 }
+
