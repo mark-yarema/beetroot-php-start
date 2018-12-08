@@ -6,6 +6,8 @@
  * Time: 19:45
  */
 
+namespace Core;
+
 class  Router
 {
 
@@ -41,11 +43,12 @@ class  Router
     {
         $url = parse_url($url, PHP_URL_PATH);
 
-        if (isset($this->routes[$method][$url])) {             //передивитися//
-            return $this->routes[$method][$url];
+        if (! isset($this->routes[$method][$url])) {             //передивитися//
+
+            throw new \Exception('Page not found');
         }
 
-        throw new Exception('Page not found');
+
 
         $array = explode('@', $this->routes[$method][$url]);
         return $this->callAction(...$array);
@@ -53,9 +56,12 @@ class  Router
 
         public function callAction($controller, $action)
     {
+
+
+        $controller = '\App\Controllers\\'.$controller;
         $controller = new $controller;
         if (! method_exists($controller, $action)) {
-        throw new Exception('Action don`t exists');
+        throw new \Exception('Action don`t exists');
     }
         return $controller->$action();
     }

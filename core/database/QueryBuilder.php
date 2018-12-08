@@ -10,6 +10,10 @@
  * @var PDO
  */
 
+namespace Core\Database;
+
+use PDO;
+
 class QueryBuilder
 {
     protected $pdo;

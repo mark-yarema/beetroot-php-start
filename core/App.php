@@ -6,6 +6,8 @@
  * Time: 20:01
  */
 
+namespace Core;
+
 class App
 {
     protected static $registry = [];

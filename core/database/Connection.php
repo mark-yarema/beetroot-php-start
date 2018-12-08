@@ -6,6 +6,10 @@
  * Time: 20:31
  */
 
+namespace Core\Database;
+
+use PDO;
+
 class Connection
 {
     public static function make($config)

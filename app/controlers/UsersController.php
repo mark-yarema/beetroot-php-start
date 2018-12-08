@@ -6,13 +6,25 @@
  * Time: 20:58
  */
 
+namespace App\Controlers;
+
+use Core\App;
+
 class UsersController
 {
     public function Index()
     {
         $users = App::get('database')->sellctAll('users', 'User');
 
-        require 'views/index.s.php';
+        view('Index');
+    }
+
+    public function store()
+    {
+        App::get('database')->insert('users', ['name' => $_POST['name']]);
+
+
+
+
     }
 }
-

@@ -1,7 +1,7 @@
 <?php require "partials/header.views.php"; ?>
     <h1>Ask your Name</h1>
 
-    <form action="save-name" method="POST">
+    <form action="users" method="POST">
         <input type="text" name="name">
         <button type="submit">Submit</button>
     </form>

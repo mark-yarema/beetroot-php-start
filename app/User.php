@@ -1,5 +1,6 @@
 <?php
 
+
 Class User
 {
     public $id;

@@ -8,3 +8,9 @@ function dd($arg)
     die();
 }
 
+function view($name, $variables = [])
+{
+    extract($variables);
+    require 'app/views/' . $name . '.views.php';
+}
+

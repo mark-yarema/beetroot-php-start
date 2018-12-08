@@ -6,20 +6,29 @@
  * Time: 20:25
  */
 
+namespace App\Controllers;
+
+use Core\App;
+
+
 class PagesController
 {
     public function index()
     {
     $users = App::get('database')->selectAll('users', 'User');
 
-    require 'views/index.s.php';
+    view('index', ['users' => $users] );
     }
     public function contact()
     {
-        require 'views/contact.views.php';
+        view('contact');
     }
     public function about()
     {
-        require 'views/about.s.php';
+        view('about');
+    }
+
+    public function ask(){
+        view('ask');
     }
 }

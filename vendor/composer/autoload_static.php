@@ -11,14 +11,18 @@ class ComposerStaticInitc55676e4f6f2427248abe19ac5ca90bf
     );
 
     public static $classMap = array (
+        'App\\Controlers\\UsersController' => __DIR__ . '/../..' . '/app/controlers/UsersController.php',
+        'App\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/controlers/PagesController.php',
         'ComposerAutoloaderInitc55676e4f6f2427248abe19ac5ca90bf' => __DIR__ . '/..' . '/composer/autoload_real.php',
+        'ComposerClass' => __DIR__ . '/../..' . '/ComposerClass.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInitc55676e4f6f2427248abe19ac5ca90bf' => __DIR__ . '/..' . '/composer/autoload_static.php',
-        'Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
-        'QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
-        'Request' => __DIR__ . '/../..' . '/core/Request.php',
-        'Router' => __DIR__ . '/../..' . '/core/database/Router.php',
-        'User' => __DIR__ . '/../..' . '/User.php',
+        'Core\\App' => __DIR__ . '/../..' . '/core/App.php',
+        'Core\\Database\\Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
+        'Core\\Database\\QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
+        'Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
+        'Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
+        'User' => __DIR__ . '/../..' . '/app/User.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
